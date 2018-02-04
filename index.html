@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	body{
+		width: 980px;
+	}
+	div{
+		padding: 30px;
+	}
+	.wrap{
+		background-color: #ccc;
+		width: 700px;
+	}
+	.inner{
+		background-color: tomato;
+	}
+	.inner2{
+		background-color: bisque;
+	}
+	
+	/*重なり順テスト*/
+	#button trigger{
+		background-color: #ccc;
+	}
+	.forTestAbs .absTgt{
+		z-index: 1049;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100px;
+		height: 100px;
+		background-color: #52bd7e;
+	}
+	.overlay{
+		display: none;
+		position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100vw;
+	  height: 100vh;
+	  z-index: 1050;
+		background-color: rgba(255, 255, 255, .8);
+		/* transition: 3s; */
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="inner">
+			<p>テスト</p>
+		</div>
+		<div class="inner2">
+			<p>テストテスト</p>
+		</div>
+	</div>
+	
+	<div id="button">
+		<p class="trigger">モーダルオープン</p>
+	</div>
+	<div class="forTestAbs">
+		<div>
+			<div>
+				<p class="absTgt">absolute</p>
+			</div>
+		</div>
+	</div>
+	<div class="overlay"></div>
+	
+	
+	
+	
+	
+	<!-- script -->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		//重なり順テスト
+		$('#button .trigger').on('click', function(){
+			// $('.overlay').css({"display": "block"});
+			$('.overlay').fadeIn(3000);
+			
+		});
+		
+		$('.overlay').on('click', function(){
+			// $('.overlay').css({"display": "none"});
+			$('.overlay').fadeOut(3000);
+		});
+		
+		
+	</script>
+
+	<script type="text/javascript">	
+		var wrap = document.querySelector('div.wrap');
+		var inner = document.querySelector('div.inner');
+		var inner_p = document.querySelector('div.inner p');
+		var inner2 = document.querySelector('div.inner2');
+		var inner2_p = document.querySelector('div.inner2 p');
+		
+		//
+		wrap.onclick = function(e){
+			e.stopPropagation();
+			console.log('一番外側のwrap');
+		}
+		
+		inner.onclick = function(e){
+			//e.stopPropagation();
+			console.log('inner');
+		}
+		
+		inner2.onclick = function(e){
+			////e.stopPropagation();
+			console.log('inner2');
+		}
+		
+		//p
+		inner_p.onclick = function(e){
+			// e.preventDefault();
+			//e.stopPropagation();
+			console.log('inner_p');
+		}
+		
+		inner2_p.onclick = function(){
+			console.log('inner2_p');
+		}
+	</script>
+</body>
+</html>
