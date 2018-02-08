@@ -26,40 +26,41 @@ var polygon3 = class p{
 }
 
 
-//いただいたサンプルソース
+
+//いただいたサンプルソースを改造 --------------------------------------------------
 class Animal {
-  // constructor(){
-  //   // console.log('constructorが呼ばれました'　+ this.constructor.name);
-  // }
   get identifier() {
     return this.constructor.name;
   }
+  voice(){
+    console.log(this.nakigoe);
+  }
 }
 
-class Cat extends Animal { }
-class Tiger extends Animal { }
+class Cat extends Animal { 
+  get nakigoe(){
+    return "ニャー";
+  }
+  // voice(){
+  //   console.log(this.nakigoe);
+  // }
+}
+
+class Tiger extends Animal {
+  get nakigoe(){
+    return "ガオー";
+  }
+  // voice(){
+  //   console.log(this.nakigoe);
+  // }
+}
 
 const cat = new Cat();
 const tiger = new Tiger();
 console.log(cat.identifier); // Cat
 console.log(tiger.identifier);  // Tiger
-
-console.log(cat);
-
-
-const catcat = new Animal();
-console.log(catcat);
-
-//functionでやるとどうなるか
-function testAnimal(){
-  // this.name = "dog";
-}
-
-//
-const testAni = new testAnimal();
-console.log(testAni.constructor.name);
-
-
+cat.voice();
+tiger.voice();
 
 
 
