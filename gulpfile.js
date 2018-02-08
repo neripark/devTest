@@ -1,8 +1,9 @@
-// import gulp from 'gulp';
-// import babel from 'gulp-babel';
 let gulp = require('gulp');
 let webserver = require('gulp-webserver');
 let babel = require('gulp-babel');
+// import gulp from 'gulp';
+// import webserver from 'gulp-webserver';
+// import babel from 'gulp-babel';
 
 gulp.task('build', function(){
   gulp.src('./src/js/*.js')

@@ -19,8 +19,16 @@
   },
   "homepage": "https://github.com/neripark/devTest#readme",
   "dependencies": {
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-webserver": "^0.9.1"
+  },
+  "babel": {
+    "env": {
+      "default": {
+        "presets": [["env"]]
+      }
+    }
   }
 }
