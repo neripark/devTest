@@ -2,7 +2,7 @@ export default class Animal {
   get identifier() {
     return this.constructor.name;
   }
-  voice(){
+  voice() {
     console.log(this.nakigoe);
   }
 }

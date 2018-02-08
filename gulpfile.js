@@ -5,7 +5,7 @@ let webserver = require('gulp-webserver');
 let babel = require('gulp-babel');
 
 gulp.task('build', function(){
-  gulp.src('./js/test.js')
+  gulp.src('./src/js/*.js')
   .pipe(babel())
   .pipe(gulp.dest('./dist/js'))
 });
@@ -19,4 +19,8 @@ gulp.task('server', function(){
   }))
 });
 
-gulp.task('default', ['build','server']);
+gulp.task('watch', function(){
+  gulp.watch('./src/js/*.js', ['build'])
+});
+
+gulp.task('default', ['build','watch','server']);
