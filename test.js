@@ -28,15 +28,7 @@ var polygon3 = class p{
 
 
 //いただいたサンプルソースを改造 --------------------------------------------------
-class Animal {
-  get identifier() {
-    return this.constructor.name;
-  }
-  voice(){
-    console.log(this.nakigoe);
-  }
-}
-
+import Animal from './module/Animal.js';
 class Cat extends Animal { 
   get nakigoe(){
     return "ニャー";
