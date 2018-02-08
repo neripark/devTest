@@ -31,7 +31,7 @@ var polygon3 = class p{
 import Animal from './Animal.js';
 class Cat extends Animal { 
   get nakigoe(){
-    return `${this.constructor.name}はニャー！`;
+    return `${this.constructor.name}はニャー!!`;
   }
   // voice(){
   //   console.log(this.nakigoe);

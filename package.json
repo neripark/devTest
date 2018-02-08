@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "server": "gulp server"
   },
   "repository": {
     "type": "git",
@@ -19,16 +20,19 @@
   },
   "homepage": "https://github.com/neripark/devTest#readme",
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-webserver": "^0.9.1"
   },
-  "babel": {
-    "env": {
-      "default": {
-        "presets": [["env"]]
-      }
-    }
+  "babel":{
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["last 2 versions", "IE 11"]
+        }
+      }]
+    ]
   }
 }
