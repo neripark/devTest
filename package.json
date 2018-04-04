@@ -26,9 +26,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-webserver": "^0.9.1"
   },
-  "babel":{
-    "presets": [
-      ["env"]
-    ]
+  "devDependencies": {
+    "babel-core": "^6.26.0"
   }
 }

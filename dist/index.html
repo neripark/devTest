@@ -80,55 +80,56 @@
 	<!-- script -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-		//重なり順テスト
-		$('#button .trigger').on('click', function(){
-			// $('.overlay').css({"display": "block"});
-			$('.overlay').fadeIn(3000);
-			
-		});
-		
-		$('.overlay').on('click', function(){
-			// $('.overlay').css({"display": "none"});
-			$('.overlay').fadeOut(3000);
-		});
-		
-		
+		// //重なり順テスト
+		// $('#button .trigger').on('click', function(){
+		// 	// $('.overlay').css({"display": "block"});
+		// 	$('.overlay').fadeIn(3000);
+		// 
+		// });
+		// 
+		// $('.overlay').on('click', function(){
+		// 	// $('.overlay').css({"display": "none"});
+		// 	$('.overlay').fadeOut(3000);
+		// });
+		// 
+		// 
 	</script>
 
 	<script type="text/javascript">	
-		var wrap = document.querySelector('div.wrap');
-		var inner = document.querySelector('div.inner');
-		var inner_p = document.querySelector('div.inner p');
-		var inner2 = document.querySelector('div.inner2');
-		var inner2_p = document.querySelector('div.inner2 p');
-		
-		//
-		wrap.onclick = function(e){
-			e.stopPropagation();
-			console.log('一番外側のwrap');
-		}
-		
-		inner.onclick = function(e){
-			//e.stopPropagation();
-			console.log('inner');
-		}
-		
-		inner2.onclick = function(e){
-			////e.stopPropagation();
-			console.log('inner2');
-		}
-		
-		//p
-		inner_p.onclick = function(e){
-			// e.preventDefault();
-			//e.stopPropagation();
-			console.log('inner_p');
-		}
-		
-		inner2_p.onclick = function(){
-			console.log('inner2_p');
-		}
+		// var wrap = document.querySelector('div.wrap');
+		// var inner = document.querySelector('div.inner');
+		// var inner_p = document.querySelector('div.inner p');
+		// var inner2 = document.querySelector('div.inner2');
+		// var inner2_p = document.querySelector('div.inner2 p');
+		// 
+		// //
+		// wrap.onclick = function(e){
+		// 	e.stopPropagation();
+		// 	console.log('一番外側のwrap');
+		// }
+		// 
+		// inner.onclick = function(e){
+		// 	//e.stopPropagation();
+		// 	console.log('inner');
+		// }
+		// 
+		// inner2.onclick = function(e){
+		// 	////e.stopPropagation();
+		// 	console.log('inner2');
+		// }
+		// 
+		// //p
+		// inner_p.onclick = function(e){
+		// 	// e.preventDefault();
+		// 	//e.stopPropagation();
+		// 	console.log('inner_p');
+		// }
+		// 
+		// inner2_p.onclick = function(){
+		// 	console.log('inner2_p');
+		// }
 	</script>
 	<script type="module" src="/js/test.js"></script>
+	<script type="module" src="/js/eventtest.js"></script>
 </body>
 </html>
